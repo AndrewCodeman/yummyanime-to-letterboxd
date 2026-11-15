@@ -2,8 +2,8 @@
 
 Moves your anime lists from YummyAnime to Letterboxd.
 
-I keep track of the anime I watch on YummyAnime, and my films on Letterboxd. I wanted the anime films there too,
-with my ratings, and didn't want to add a hundred and fifty of them by hand.
+If you track anime on YummyAnime and films on Letterboxd, this puts your anime films on Letterboxd too, with your
+ratings, without adding them one by one.
 
 The script reads your lists through the public YummyAnime API, so there's nothing to log in to. Anime titles are
 where imports usually go wrong: YummyAnime might call a film "Kimi no Na wa." while Letterboxd knows it as
@@ -27,8 +27,8 @@ some OVAs end up in `films.csv`: TMDB lists them as films, and so does Letterbox
 
 ## Step 1. Find your profile link
 
-Open your profile on https://yummyani.me. The link looks like `https://yummyani.me/users/id12345`. Your lists have
-to be public. They are by default.
+Open your profile on https://yummyani.me. The link looks like `https://yummyani.me/users/id12345`. The script reads
+the lists the way other visitors see them, so they have to be visible on your public profile.
 
 ## Step 2. Convert
 
@@ -51,8 +51,8 @@ anything:
 - Rows without an id are matched by English title and year. Look at those, they're the ones that go wrong.
 - **Import Titles** saves everything, and there is no undo.
 
-`watchlist.csv` goes to the watchlist import instead: open your watchlist on Letterboxd, click the settings icon
-and choose **Import**.
+`watchlist.csv` is in the same format, but it's meant for your Letterboxd watchlist, not for the films you've
+watched. Use the import on your watchlist page, not the one at letterboxd.com/import.
 
 Don't open the CSV files in Excel before importing. Excel may save them in another encoding or with semicolons,
 and then Letterboxd finds nothing. Use `yummyanime-all.csv` if you want to look at your data in Excel.

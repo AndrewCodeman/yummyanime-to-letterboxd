@@ -1,0 +1,7 @@
+# The generated files contain your ratings
+letterboxd/
+
+__pycache__/
+*.pyc
+.venv/
+venv/
